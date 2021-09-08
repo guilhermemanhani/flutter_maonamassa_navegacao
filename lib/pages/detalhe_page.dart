@@ -12,7 +12,12 @@ class DetalhePage extends StatelessWidget {
         title: const Text('Detalhe'),
       ),
       body: Center(
-        child: Text(parametro),
+        child: Column(
+          children: [
+            Text(parametro),
+            TextButton(onPressed: () {}, child: Text('Voltar'))
+          ],
+        ),
       ),
     );
   }

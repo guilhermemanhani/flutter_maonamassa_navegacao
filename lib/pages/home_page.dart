@@ -40,6 +40,16 @@ class HomePage extends StatelessWidget {
                 'Ir para detalhe',
               ),
             ),
+            TextButton(
+              onPressed: () async {
+                var msg = await Navigator.of(context)
+                    .pushNamed('/detalhe2', arguments: 'Parametro X');
+                print('Mensagem $msg');
+              },
+              child: Text(
+                'Ir para detalhe2 e aguardar',
+              ),
+            ),
           ],
         ),
       ),
